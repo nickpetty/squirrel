@@ -25,7 +25,7 @@ All converted MD to HTML files will be placed in the same hierarchy in a folder 
 Templates
 ---------
 
-Templates can include two variables. 
+Templates can include the following variables. 
 
 	{{block}} - Where the main entry (everything but the first two lines of the MD file) will go.
 
