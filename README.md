@@ -1,5 +1,5 @@
 Squirrel
-=====================
+========
 [![Creative Commons License][1]][2]
 
 Requirements
@@ -27,18 +27,16 @@ Templates
 
 Templates can include two variables. 
 
-	{{block}}
+	{{block}} - Where the main entry (everything but the first two lines of the MD file) will go.
 
-This is where the main entry (everything but the first two lines of the MD file) will go.
+	{{title}} - Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page).
 
-	{{title}}
-
-This is pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page).
+	{{datetime}} - Insert date and time.
 
 *Two example templates are included.  If you do not have a title for the Markdown file, two blank lines will suffice.*
 
 Usage
----------
+-----
 
 Use of flags for specifications.
 
@@ -47,7 +45,7 @@ Use of flags for specifications.
 *Run in root of working dir* - Doing so will pass in the directory of the file and will save in the same location in the *webserver* folder.
 
 Optional usage flags (In Development)
------------------
+-------------------------------------
 
 	squirrel ... -d 
 

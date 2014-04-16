@@ -3,6 +3,7 @@ import markdown2
 import os
 import argparse
 import re
+import datetime
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-m", dest='markdown', help="Markdown file to be converted to html.")
@@ -24,8 +25,9 @@ def convert():
 		htmlOutput += line # Turns converted read template html to a multi line string, helps for regex subs
 
 	htmlOutput = re.sub("{{title}}", str(title[0]), htmlOutput) # Sets <title> if not index
-
+	htmlOutput = re.sub("{{datetime}}", datetime.datetime.now().ctime(), htmlOutput) # Insert date and time i.e., Wed Apr 16 17:18:56 2014	
 	htmlOutput = re.sub("{{block}}", markdownHTML, htmlOutput) # Insert converted markdown to location of {{block}} in template
+
 	try:
 		open('webserver/' + args.markdown.strip(".md") + ".html", "w").write(htmlOutput) # Create html and write it
 		print "Generated %s" % (args.markdown.strip('.md') + '.html')
