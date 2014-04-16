@@ -37,7 +37,7 @@ This is pulled from the first two lines of the MD file to populate \<title\> or 
 
 *Two example templates are included.  If you do not have a title for the Markdown file, two blank lines will suffice.*
 
-Commands
+Usage
 ---------
 
 Use of flags for specifications.
@@ -46,7 +46,7 @@ Use of flags for specifications.
 
 *Run in root of working dir* - Doing so will pass in the directory of the file and will save in the same location in the *webserver* folder.
 
-Optional commands (In Development)
+Optional usage flags (In Development)
 -----------------
 
 	squirrel ... -d 
