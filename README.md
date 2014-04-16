@@ -1,3 +1,4 @@
+[![Creative Commons License][1]][2]
 Squirrel
 =====================
 
@@ -35,3 +36,6 @@ Optional commands (In Development)
 	chainsaw ... -d 
 
 This will deploy to a git repo specified in a config file.
+
+[1]: http://i.creativecommons.org/l/by-sa/4.0/80x15.png
+[2]: http://creativecommons.org/licenses/by-sa/4.0/

@@ -28,10 +28,11 @@ def convert():
 	htmlOutput = re.sub("{{block}}", markdownHTML, htmlOutput) # Insert converted markdown to location of {{block}} in template
 	try:
 		open('webserver/' + args.markdown.strip(".md") + ".html", "w").write(htmlOutput) # Create html and write it
+		print "Generated %s" % (args.markdown.strip('.md') + '.html')
 	except IOError:
 		print """Path could not be found.  Please make sure the folder hierarchy matches in 
 the local 'webserver' folder, and that the 'webserver' folder exists."""
-	print "Generated %s" % (args.markdown.strip('.md') + '.html')
+	
 
 if args.markdown:
 	if os.path.isfile(str(args.markdown)):
