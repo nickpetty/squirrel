@@ -3,13 +3,13 @@ Squirrel
 
 + Everything written in markdown.  Including index.
 + Hierarchy matches that of webserver, but in MD instead of html 
-+ HTML styling can still be applied in MD through use of div tags and CSS
++ HTML styling can still be applied in MD through use of CSS or div tags (note that MD syntax is not interpreted in html blocks)
 
 All converted MD to HTML files will be placed in the same hierarchy in a folder named '*webserver*' for simple deployment.
 
 **NOTE**: Any dependencies will need to be manually copied to their respected folders in the 'webserver' folder. i.e., pictures/videos
 
-**ANOTHER NOTE**: All nessacary folders must be created before running Squirrel.  Including 'webserver'.
+**ANOTHER NOTE**: All necessary folders must be created before running Squirrel.  Including 'webserver'.
 
 Commands
 ---------
