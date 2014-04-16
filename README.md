@@ -27,9 +27,11 @@ Templates
 
 Templates can include two variables. 
 This is where the main entry (everything but the first two lines of the MD file) will go.
+
 	{{block}}
 
 This is pulled from the first two lines of the MD file to populate \<title\> or any area you only want the title of the entry to be (i.e., top of page).
+
 	{{title}}
 
 *Two example templates are included*
