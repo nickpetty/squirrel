@@ -33,7 +33,7 @@ This is where the main entry (everything but the first two lines of the MD file)
 
 	{{title}}
 
-This is pulled from the first two lines of the MD file to populate \<title\> or any area you only want the title of the entry to be (i.e., top of page).
+This is pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page).
 
 *Two example templates are included.  If you do not have a title for the Markdown file, two blank lines will suffice.*
 

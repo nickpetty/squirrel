@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:300,300italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Squirrel</title>
+	</head>
+
+	<body>
+		<div id="header">
+			<center><h1>Squirrel</h1></center>
+		</div>	
+
+		<div id="container">
+
+			<div id="body">
+				<p><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" alt="Creative Commons License" /></a></p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>python <strong>2.7</strong></li>
+<li>markdown2 <em>pip install markdown2</em></li>
+</ul>
+
+<h2>About</h2>
+
+<ul>
+<li>Everything written in markdown.  Including index.</li>
+<li>Hierarchy matches that of webserver, but in MD instead of html </li>
+<li>HTML styling can still be applied in MD through use of CSS or div tags (note that MD syntax is not interpreted in html blocks)</li>
+<li>First two lines of Markdown file is reserved for title and will be stripped from the block.  This is to make the MD readable, and to populate the {{title}} variable in the template if included.</li>
+</ul>
+
+<p>All converted MD to HTML files will be placed in the same hierarchy in a folder named '<em>webserver</em>' for simple deployment.</p>
+
+<p><strong>NOTE</strong>: Any dependencies will need to be manually copied to their respected folders in the 'webserver' folder. i.e., pictures/videos</p>
+
+<p><strong>ANOTHER NOTE</strong>: All necessary folders must be created before running Squirrel.  Including 'webserver'.</p>
+
+<h2>Templates</h2>
+
+<p>Templates can include two variables. </p>
+
+<pre><code>{{block}}
+</code></pre>
+
+<p>This is where the main entry (everything but the first two lines of the MD file) will go.</p>
+
+<pre><code>{{title}}
+</code></pre>
+
+<p>This is pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page).</p>
+
+<p><em>Two example templates are included.  If you do not have a title for the Markdown file, two blank lines will suffice.</em></p>
+
+<h2>Usage</h2>
+
+<p>Use of flags for specifications.</p>
+
+<pre><code>squirrel -t &lt;template&gt; -m &lt;markdown file&gt;
+</code></pre>
+
+<p><em>Run in root of working dir</em> - Doing so will pass in the directory of the file and will save in the same location in the <em>webserver</em> folder.</p>
+
+<h2>Optional usage flags (In Development)</h2>
+
+<pre><code>squirrel ... -d
+</code></pre>
+
+<p>This will deploy to a git repo specified in a config file.</p>
+
+			</div>
+			
+		</div>
+		
+		<div id="footer">
+
+		</div>
+	</body>
+</html>

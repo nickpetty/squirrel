@@ -1,8 +1,25 @@
 <html>
-<title>{{title}}</title>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:300,300italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>{{title}}</title>
+	</head>
 
 	<body>
-	{{block}}
-	</body>
+		<div id="header">
+			<center><h1>{{title}}</h1></center>
+		</div>	
 
+		<div id="container">
+
+			<div id="body">
+				{{block}}
+			</div>
+			
+		</div>
+		
+		<div id="footer">
+
+		</div>
+	</body>
 </html>
