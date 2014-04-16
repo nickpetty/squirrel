@@ -1,6 +1,15 @@
 Squirrel
 =====================
 
+Requirements
+------------
+
+- python **2.7**
+- markdown2 *pip install markdown2*
+
+About
+-----
+
 + Everything written in markdown.  Including index.
 + Hierarchy matches that of webserver, but in MD instead of html 
 + HTML styling can still be applied in MD through use of CSS or div tags (note that MD syntax is not interpreted in html blocks)
