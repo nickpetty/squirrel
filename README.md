@@ -14,13 +14,25 @@ About
 + Everything written in markdown.  Including index.
 + Hierarchy matches that of webserver, but in MD instead of html 
 + HTML styling can still be applied in MD through use of CSS or div tags (note that MD syntax is not interpreted in html blocks)
-+ First two lines of Markdown file is reserved for <title> and will be stripped.  This is to make the MD readable, and to populate the {{title}} variable in the template if included.
++ First two lines of Markdown file is reserved for title and will be stripped from the block.  This is to make the MD readable, and to populate the {{title}} variable in the template if included.
 
 All converted MD to HTML files will be placed in the same hierarchy in a folder named '*webserver*' for simple deployment.
 
 **NOTE**: Any dependencies will need to be manually copied to their respected folders in the 'webserver' folder. i.e., pictures/videos
 
 **ANOTHER NOTE**: All necessary folders must be created before running Squirrel.  Including 'webserver'.
+
+Templates
+---------
+
+Templates can include two variables. 
+This is where the main entry (everything but the first two lines of the MD file) will go.
+	{{block}}
+
+This is pulled from the first two lines of the MD file to populate \<title\> or any area you only want the title of the entry to be (i.e., top of page).
+	{{title}}
+
+*Two example templates are included*
 
 Commands
 ---------
