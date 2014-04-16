@@ -1,6 +1,6 @@
-[![Creative Commons License][1]][2]
 Squirrel
 =====================
+[![Creative Commons License][1]][2]
 
 Requirements
 ------------
@@ -14,6 +14,7 @@ About
 + Everything written in markdown.  Including index.
 + Hierarchy matches that of webserver, but in MD instead of html 
 + HTML styling can still be applied in MD through use of CSS or div tags (note that MD syntax is not interpreted in html blocks)
++ First two lines of Markdown file is reserved for <title> and will be stripped.  This is to make the MD readable, and to populate the {{title}} variable in the template if included.
 
 All converted MD to HTML files will be placed in the same hierarchy in a folder named '*webserver*' for simple deployment.
 
