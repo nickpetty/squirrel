@@ -6,7 +6,8 @@ Requirements
 ------------
 
 - python **2.7**
-- markdown2 *pip install markdown2*
+- ~~markdown2 *pip install markdown2*~~
+- gfm ([GitHub Flavored Markdown][3]) *pip install gfm*
 
 About
 -----
@@ -21,6 +22,38 @@ All converted MD to HTML files will be placed in the same hierarchy in a folder 
 **NOTE**: Any dependencies will need to be manually copied to their respected folders in the 'webserver' folder. i.e., pictures/videos
 
 **ANOTHER NOTE**: All necessary folders must be created before running Squirrel.  Including 'webserver'.
+
+Folder Hierarchy
+----------------
+
+**Example:**
+
+	+ blog
+	|
+	|-+ templates
+	|  |
+	|  |- index.html
+	|  |- post.html
+	|
+	|-+ posts
+	|  |
+	|  |- How I Learned RegEx In One Week.md
+	|
+	|-+ webserver
+	|  |
+	|  |- index.html
+	|  |- style.css
+	|  |- posts
+	|    |
+	|    + How-I-Learned-RegEx-In-One-Week
+	|       |
+	|       |-index.html
+	|
+	|-- index.md
+
+As you see here, the converted post is placed into a folder of the name of the MD file.  This helps keep clean URLs.  This folder is genereated automatically.  However, the 'posts' folder it is in, is not.  You must duplicate the folder hierarchy in the 'webserver' folder.
+
+Also, be sure to correctly address your style.css in the templates to reflect the root of what would be your webserver.
 
 Templates
 ---------
@@ -61,3 +94,4 @@ This will deploy to a git repo specified in a config file.
 
 [1]: http://i.creativecommons.org/l/by-sa/4.0/80x15.png
 [2]: http://creativecommons.org/licenses/by-sa/4.0/
+[3]: https://help.github.com/articles/github-flavored-markdown
