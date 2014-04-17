@@ -37,9 +37,13 @@ def convert():
 	htmlOutput = re.sub("{{block}}", markdownHTML, htmlOutput) # Insert converted markdown to location of {{block}} in template
 
 	try:
+		if not os.path.exists('webserver'): # Check foe existence of webserver folder
+			os.mkdir('webserver')
+
 		htmlPath = args.markdown.strip(".md").replace(' ', '-') + '/'
-		if not os.path.exists('webserver/' + htmlPath):
+		if not os.path.exists('webserver/' + htmlPath): # Check for existence of child folder
 			os.mkdir('webserver/' + htmlPath)
+
 		open('webserver/' + htmlPath + "/index.html", "w").write(htmlOutput.encode('ascii', 'ignore')) # Create html and write it
 		print "Generated %s" % (args.markdown.strip('.md'))
 	except IOError:

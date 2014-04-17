@@ -17,11 +17,11 @@ About
 + HTML styling can still be applied in MD through use of CSS or div tags (note that MD syntax is not interpreted in html blocks)
 + First two lines of Markdown file is reserved for title and will be stripped from the block.  This is to make the MD readable, and to populate the {{title}} variable in the template if included.
 
-All converted MD to HTML files will be placed in the same hierarchy in a folder named '*webserver*' for simple deployment.
+All converted MD to HTML files will be placed in the same hierarchy in a folder named '*webserver*'(generated automatically) for simple deployment.
 
 **NOTE**: Any dependencies will need to be manually copied to their respected folders in the 'webserver' folder. i.e., pictures/videos
 
-**ANOTHER NOTE**: All necessary folders must be created before running Squirrel.  Including 'webserver'.
+**ANOTHER NOTE**: All necessary folders must be created before running Squirrel. 
 
 Folder Hierarchy
 ----------------
@@ -51,7 +51,7 @@ Folder Hierarchy
 	|
 	|-- index.md
 
-As you see here, the converted post is placed into a folder of the name of the MD file.  This helps keep clean URLs.  This folder is genereated automatically.  However, the 'posts' folder it is in, is not.  You must duplicate the folder hierarchy in the 'webserver' folder.
+As you see here, the converted post is placed into a folder of the name of the MD file.  This helps keep clean URLs.  This folder is genereated automatically.  However, the 'posts' folder it is in, is not.  If it could not find the 'posts' folder, an error would be returned.  You must duplicate the folder hierarchy in the 'webserver' folder.
 
 Also, be sure to correctly address your style.css in the templates to reflect the root of what would be your webserver.
 
