@@ -82,6 +82,7 @@ Usage
 Use of flags for specifications.
 
 	squirrel -t <template> -m <markdown file>
+	squirrel -t index.html -m README.md
 
 *Run in root of working dir* - Doing so will pass in the directory of the file and will save in the same location in the *webserver* folder.
 
