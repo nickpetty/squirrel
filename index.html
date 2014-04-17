@@ -7,11 +7,12 @@
 
 	<body>
 		<div id="header">
-			<center><h1>Squirrel</h1></center>
+			<center><h1><font color='white'>Squirrel</font></h1></center>
 		</div>	
 
 		<div id="container">
-
+		<em>Posted on Wed Apr 16 20:33:57 2014</em>
+		<br>
 			<div id="body">
 				<p><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" alt="Creative Commons License" /></a></p>
 
@@ -39,17 +40,24 @@
 
 <h2>Templates</h2>
 
-<p>Templates can include two variables. </p>
+<p>Templates are optional.  If no template is specified, the MD is simply converted to html and saved.</p>
+
+<p>Templates can include the following variables. </p>
+
+<p>Where the main entry (everything but the first two lines of the MD file) will go:</p>
 
 <pre><code>{{block}}
 </code></pre>
 
-<p>This is where the main entry (everything but the first two lines of the MD file) will go.</p>
+<p>Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page):</p>
 
 <pre><code>{{title}}
 </code></pre>
 
-<p>This is pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page).</p>
+<p>Insert date and time:</p>
+
+<pre><code>{{datetime}}
+</code></pre>
 
 <p><em>Two example templates are included.  If you do not have a title for the Markdown file, two blank lines will suffice.</em></p>
 
@@ -70,9 +78,8 @@
 <p>This will deploy to a git repo specified in a config file.</p>
 
 			</div>
-			
+
 		</div>
-		
 		<div id="footer">
 
 		</div>
