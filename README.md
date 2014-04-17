@@ -1,5 +1,5 @@
 Squirrel
-=====================
+========
 [![Creative Commons License][1]][2]
 
 Requirements
@@ -25,20 +25,26 @@ All converted MD to HTML files will be placed in the same hierarchy in a folder 
 Templates
 ---------
 
-Templates can include two variables. 
+Templates are optional.  If no template is specified, the MD is simply converted to html and saved.
+
+Templates can include the following variables. 
+
+Where the main entry (everything but the first two lines of the MD file) will go:
 
 	{{block}}
 
-This is where the main entry (everything but the first two lines of the MD file) will go.
+Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page):
 
 	{{title}}
 
-This is pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page).
+Insert date and time:
+
+	{{datetime}}
 
 *Two example templates are included.  If you do not have a title for the Markdown file, two blank lines will suffice.*
 
 Usage
----------
+-----
 
 Use of flags for specifications.
 
@@ -47,7 +53,7 @@ Use of flags for specifications.
 *Run in root of working dir* - Doing so will pass in the directory of the file and will save in the same location in the *webserver* folder.
 
 Optional usage flags (In Development)
------------------
+-------------------------------------
 
 	squirrel ... -d 
 
