@@ -25,13 +25,15 @@ All converted MD to HTML files will be placed in the same hierarchy in a folder 
 Templates
 ---------
 
+Templates are optional.  If no template is specified, the MD is simply converted to html and saved.
+
 Templates can include the following variables. 
 
 Where the main entry (everything but the first two lines of the MD file) will go:
 
 	{{block}}
 
-(optional) Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page):
+Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page):
 
 	{{title}}
 
