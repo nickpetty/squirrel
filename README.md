@@ -27,11 +27,17 @@ Templates
 
 Templates can include the following variables. 
 
-	{{block}} - Where the main entry (everything but the first two lines of the MD file) will go.
+Where the main entry (everything but the first two lines of the MD file) will go:
 
-	{{title}} - Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page).
+	{{block}}
 
-	{{datetime}} - Insert date and time.
+Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page):
+
+	{{title}}
+
+Insert date and time:
+
+	{{datetime}}
 
 *Two example templates are included.  If you do not have a title for the Markdown file, two blank lines will suffice.*
 
