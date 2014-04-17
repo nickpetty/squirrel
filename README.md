@@ -31,7 +31,7 @@ Where the main entry (everything but the first two lines of the MD file) will go
 
 	{{block}}
 
-Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page):
+(optional) Pulled from the first two lines of the MD file to populate the 'title' tag or any area you only want the title of the entry to be (i.e., top of page):
 
 	{{title}}
 
