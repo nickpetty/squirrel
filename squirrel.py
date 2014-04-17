@@ -37,7 +37,7 @@ def convert():
 	htmlOutput = re.sub("{{block}}", markdownHTML, htmlOutput) # Insert converted markdown to location of {{block}} in template
 
 	try:
-		open('webserver/' + args.markdown.strip(".md") + ".html", "w").write(htmlOutput) # Create html and write it
+		open('webserver/' + args.markdown.strip(".md") + ".html", "w").write(htmlOutput.encode('ascii', 'ignore')) # Create html and write it
 		print "Generated %s" % (args.markdown.strip('.md') + '.html')
 	except IOError:
 		print """Path could not be found.  Please make sure the folder hierarchy matches in 
@@ -48,3 +48,5 @@ if args.markdown:
 		convert()
 	else:
 		print "File " + args.markdown + " could not be found."
+else:
+	print parser.parse_args(['-h'])
