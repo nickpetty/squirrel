@@ -30,22 +30,22 @@ Folder Hierarchy
 
 	+ blog
 	|
-	|-+ templates
+	|--+ templates
 	|  |
 	|  |- index.html
 	|  |- post.html
 	|
-	|-+ posts
+	|--+ posts
 	|  |
 	|  |- How I Learned RegEx In One Week.md
 	|
-	|-+ webserver
+	|--+ webserver
 	|  |
 	|  |- index.html
 	|  |- style.css
 	|  |- posts
 	|    |
-	|    + How-I-Learned-RegEx-In-One-Week
+	|    |--+ How-I-Learned-RegEx-In-One-Week
 	|       |
 	|       |-index.html
 	|
