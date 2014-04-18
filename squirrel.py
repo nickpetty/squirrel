@@ -3,7 +3,8 @@ import os
 import argparse
 import re
 import datetime
-import gfm
+import markdown2
+import pygments
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-m", dest='markdown', help="Markdown file to be converted to html.")
@@ -18,14 +19,14 @@ def convert():
 	block = markdownInput.split('\n')[2:] # Strip the title out of the entry
 	block = '\n'.join(block)
 
-	markdownHTML = gfm.markdown(block.decode('utf8')) # Convert markdown to HTML
+	markdownHTML = markdown2.markdown(block.decode('utf8'), extras=['fenced-code-blocks', 'wiki-tables']) # Convert markdown to HTML
 
 	if args.template:
 		title = str(title[0]) 
 		template = open('templates/' + args.template).read() # Load template specified by -t flag
 	else:
 		title = str(title[0]) + '\n' + str(title[1])
-		title = gfm.markdown(title)
+		title = markdown2.markdown(title)
 		template = "{{title}}\n{{block}}"
 
 	htmlOutput = ''

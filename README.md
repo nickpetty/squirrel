@@ -6,8 +6,8 @@ Requirements
 ------------
 
 - python **2.7**
-- ~~markdown2 *pip install markdown2*~~
-- gfm ([GitHub Flavored Markdown][3]) *pip install gfm*
+- markdown2 *pip install markdown2*
+- ~~gfm ([GitHub Flavored Markdown][3]) *pip install gfm*~~
 
 About
 -----
